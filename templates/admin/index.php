@@ -1,9 +1,13 @@
-<h1>Vue WordPress</h1>
-<div id="vwp-plugin"></div>
-
-<?php if ( preg_match("/(.*.loc|localhost:.*|.*.local)/i", $_SERVER['HTTP_HOST']) ) : ?>
-  <!-- BrowserSync for local development -->
-<script id="__bs_script__">//<![CDATA[
-document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-//]]></script>
-<?php endif; ?>
+<h2>WasteCare Map Location Settings</h2>
+  <form action="options.php" method="post">
+    <?php 
+    settings_fields( 'wc_location_plugin_settings' );
+    do_settings_sections( 'wc_location_finder' );
+    ?>
+    <input
+      type="submit"
+      name="submit"
+      class="button button-primary"
+      value="<?php esc_attr_e( 'Save' ); ?>"
+    />
+  </form>
