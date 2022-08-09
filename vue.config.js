@@ -1,7 +1,7 @@
 module.exports = {
   lintOnSave: true,
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/wp-content/plugins/wc-location-finder/dist/'
+    ? '/wp-content/plugins/battery-location-finder/dist/'
     : 'http://localhost:8080/',
   // filenameHashing: false,
   outputDir: './dist',

@@ -14,13 +14,13 @@
           :position="m.position"
           :supplierId="m.supKey"
        >
-        <div class="lg:flex py-5 px-4">
+        <div class="font-sans lg:flex py-5 px-4">
             <div class="flex-1 min-w-0">
-                <h4 class="text-m font-bold leading-7 text-wc-blue sm:text-s">
+                <span class="font-sans text-m font-bold leading-7 text-wc-blue sm:text-s">
                   {{ m.supCompanyName }}
-                </h4>
+                </span>
                 <div class="mt-1 flex flex-col sm:flex-wrap sm:mt-0 sm:space-x-6">
-                  <div class="mt-2 flex items-center text-sm text-wc-blue leading-6">
+                  <div class="font-sans mt-2 flex items-center text-sm text-wc-blue leading-6">
                       {{ m.address }}
                   </div>
                 </div>

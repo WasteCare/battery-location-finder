@@ -7,7 +7,7 @@
 
         <div class="lg:flex py-5 px-4">
             <div class="flex-1 min-w-0">
-                <h4 class="text-base font-bold leading-7 text-white sm:text-s">
+                <h4 class="m-0 font-sans text-base font-bold leading-7 text-white sm:text-s">
                   {{ supCompanyName }}
                 </h4>
                 <div class="mt-1 flex flex-col sm:flex-wrap sm:mt-0 sm:space-x-6">

@@ -65,17 +65,18 @@ class WcLocationFinder
 
   public function render_location_finder() {
     
+    wp_enqueue_style( "wc-location-font", 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap', [], null, false);
+
     if ( $this->is_develop_server() ) {
       wp_enqueue_style( "wc-location-css-vendors", 'http://localhost:8080/css/app.css', [], '1.0.2', false);
       wp_enqueue_style( "wc-location-css", 'http://localhost:8080/css/chunk-vendors.css', [], '1.0.2', false);
 
-      wp_enqueue_script( "wc-location-vendors", 'http://localhost:8080/js/chunk-vendors.js', array(), '1.0.2', true );
+      wp_enqueue_script( "wc-location-vendors", 'http://localhost:8080/js/chunk-vendors.js', array('jquery'), '1.0.2', true );
       wp_enqueue_script( "wc-location-app", 'http://localhost:8080/js/app.js', array('wc-location-vendors'), '1.0.2', true );
     } else {
-
       wp_enqueue_style( "wc-location-css-vendors", plugins_url('/dist/css/chunk-vendors.css', __FILE__), [], '1.0.2', 'all');
       wp_enqueue_style( "wc-location-css", plugins_url('/dist/css/app.css', __FILE__), [], '1.0.2', 'all' );
-      wp_enqueue_script( "wc-location-vendors", plugins_url('/dist/js/chunk-vendors.js', __FILE__), array(), '1.0.2', true );
+      wp_enqueue_script( "wc-location-vendors", plugins_url('/dist/js/chunk-vendors.js', __FILE__), array('jquery'), '1.0.2', true );
       wp_enqueue_script( "wc-location-app", plugins_url('/dist/js/app.js', __FILE__), array(
         'wc-location-vendors'
       ), '1.0.2', true );
@@ -96,9 +97,9 @@ class WcLocationFinder
         'googleKey' => $options['google_maps_api_key'],
         'action' => 'wc_location_finder'
       )
-      );
+    );
 
-    require_once plugin_dir_path(__FILE__) . 'templates/client/index.php';
+    return '<div id="wc-app"></div>';
   }
 
   public function add_admin_page() {

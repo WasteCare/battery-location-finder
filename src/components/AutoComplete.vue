@@ -3,7 +3,7 @@
   <GMapAutocomplete
        placeholder="Street address or postcode"
        @place_changed="setPlace"
-       class="border-none block w-full transition duration-500 ease-in-out outline-none font-light rounded-tl-3xl rounded-br-3xl bg-white px-4 py-2 leading-8"
+       class="font-sans border-none block w-full transition duration-500 ease-in-out outline-none font-light rounded-tl-3xl rounded-br-3xl bg-white px-4 py-2 leading-8"
     >
   </GMapAutocomplete>
   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 46.24 53.31"  class="w-5 h-5 absolute right-7 top-8  text-wc-blue fill-current">
